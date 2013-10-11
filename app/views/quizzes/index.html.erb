@@ -1,0 +1,8 @@
+<h1>Quiz fun time!</h1>
+
+<% @quizzes.each do |quiz| %>
+
+  <%= link_to quiz.title, quiz %><br>
+  <%= quiz.questions %>
+
+<% end %>

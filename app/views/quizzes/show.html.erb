@@ -1,0 +1,17 @@
+<h1><%= @quiz.title %></h1>
+
+<% @quiz.questions.each do |questions| %>
+	<%= questions.query %>
+	<% end %>
+
+
+
+<%= form_for @quiz do |f| %> 
+	<%= f.text_field :title %>
+	<%= f.fields_for :question do |question_f| %>
+		<% question_f.text_field :query %>
+		<% end %>
+
+	<%= f.submit %>
+<% end %> 
+
